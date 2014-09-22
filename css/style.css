@@ -1,0 +1,185 @@
+html,
+body,
+div,
+form,
+fieldset,
+legend,
+label {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+caption {
+  font-weight: normal;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+img {
+  border: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.span100,
+.span25,
+.span50,
+.span75,
+.span33,
+.span66 {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+.span100 {
+  width: 100%;
+}
+.span25 {
+  width: 100%;
+}
+.span50 {
+  width: 100%;
+}
+.span75 {
+  width: 100%;
+}
+.span33 {
+  width: 100%;
+}
+.span66 {
+  width: 100%;
+}
+/* SMALL  */
+@media only screen and (min-width: 481px) {
+  .span100 {
+    width: 100%;
+  }
+  .span25 {
+    width: 50%;
+  }
+  .span50 {
+    width: 100%;
+  }
+  .span75 {
+    width: 100%;
+  }
+  .span33 {
+    width: 50%;
+  }
+  .span66 {
+    width: 100%;
+  }
+}
+/* MEDIUM  */
+@media only screen and (min-width: 769px) {
+  .span100 {
+    width: 100%;
+  }
+  .span25 {
+    width: 25%;
+  }
+  .span50 {
+    width: 50%;
+  }
+  .span75 {
+    width: 75%;
+  }
+  .span33 {
+    width: 33.33%;
+  }
+  .span66 {
+    width: 66.66%;
+  }
+}
+/* LARGE  */
+@media only screen and (min-width: 993px) {
+  .span100 {
+    width: 100%;
+  }
+  .span25 {
+    width: 25%;
+  }
+  .span50 {
+    width: 50%;
+  }
+  .span75 {
+    width: 75%;
+  }
+  .span33 {
+    width: 33.33%;
+  }
+  .span66 {
+    width: 66.66%;
+  }
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.eot');
+  src: url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.eot');
+  src: url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf') format('truetype'), url('../fonts/OpenSans-Light.svg') format('svg');
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url('../fonts/OpenSans-Semibold.eot');
+  src: url('../fonts/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans-Semibold.ttf') format('truetype'), url('../fonts/OpenSans-Semibold.svg') format('svg');
+}
+body {
+  font-family: "OpenSans-Regular", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #666666;
+  color: #ffffff;
+}
+.state.selected {
+  fill: gray;
+  stroke: white;
+  z-index: 1000;
+}

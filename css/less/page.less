@@ -1,0 +1,16 @@
+@pageMargin: 15px;
+
+body {
+    .font-regular(@font-size);
+    line-height: @line-height;
+    background: @background;
+    color: @color;
+} 
+
+.state {
+    &.selected {
+       fill: gray;
+       stroke: white;
+       z-index: 1000;
+    }
+}
