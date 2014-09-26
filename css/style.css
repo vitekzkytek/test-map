@@ -180,9 +180,8 @@ body {
 }
 .state {
   fill: #F2F2F2;
+  cursor: pointer;
 }
 .state:hover {
-  fill: gray;
-  cursor: pointer;
   stroke: black;
 }
