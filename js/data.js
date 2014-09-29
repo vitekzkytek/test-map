@@ -1,11 +1,11 @@
 var data = {
     "germany": {
         "pinFix": {
-            "x": 20,
-            "y": 35
+            "x": 80,
+            "y": 0
         },
         "metrics": {
-            "a": "0",
+            "a": "57",
             "b": "10",
             "c": "100",
             "d": "50",
@@ -14,8 +14,8 @@ var data = {
     },
     "ukraine": {
         "pinFix": {
-            "x": 20,
-            "y": 35
+            "x": 80,
+            "y": 0
         },
         "metrics": {
             "a": "10",
@@ -27,8 +27,8 @@ var data = {
     },
     "poland": {
         "pinFix": {
-            "x": 20,
-            "y": 35
+            "x": 80,
+            "y": 0
         },
         "metrics": {
             "a": "20",
@@ -40,8 +40,8 @@ var data = {
     },
     "czech": {
         "pinFix": {
-            "x": 20,
-            "y": 35
+            "x": 80,
+            "y": 0
         },
         "metrics": {
             "a": "30",
@@ -53,8 +53,8 @@ var data = {
     },
     "norway": {
         "pinFix": {
-            "x": 65,
-            "y": 0
+            "x": 120,
+            "y": -50
         },
         "metrics": {
             "a": "40",
@@ -66,8 +66,8 @@ var data = {
     },
     "sweden": {
         "pinFix": {
-            "x": 35,
-            "y": 30
+            "x": 80,
+            "y": 0
         },
         "metrics": {
             "a": "50",

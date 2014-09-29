@@ -218,6 +218,12 @@ body {
 .header .menu .menu-trigger:hover {
   text-decoration: underline;
 }
+.header .menu ul {
+  display: none;
+}
+.header .menu ul.opened {
+  display: block;
+}
 .header .menu li {
   border-top: 1px solid #14679F;
 }
@@ -266,24 +272,84 @@ body {
   left: 0;
 }
 .svg-container .state-pin {
-  position: absolute;
-  background: #005593;
   width: 30px;
-  height: 30px;
-  border-radius: 30px;
+  margin: 0 60px;
+  position: absolute;
   text-align: center;
   line-height: 30px;
   vertical-align: middle;
   cursor: pointer;
 }
-.svg-container .state-pin.pin-germany {
-  display: none;
-}
 .svg-container .state-pin .number {
+  border-radius: 30px;
+  background: #005593;
   display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
 }
 .svg-container .state-pin .detail {
+  transition: opacity 0.5s ease;
+  border-radius: 5px;
+  background: #005593;
   display: none;
+}
+.svg-container .state-pin .detail .title {
+  border-bottom: 1px solid white;
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+.svg-container .state-pin .detail .content {
+  *zoom: 1;
+  line-height: 1.5;
+  padding: 2px 0;
+}
+.svg-container .state-pin .detail .content:before,
+.svg-container .state-pin .detail .content:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.svg-container .state-pin .detail .content:after {
+  clear: both;
+}
+.svg-container .state-pin .detail .content .left {
+  float: left;
+  width: 50%;
+  padding-top: 35px;
+  text-align: center;
+}
+.svg-container .state-pin .detail .content .left .value {
+  font-size: 28px;
+}
+.svg-container .state-pin .detail .content .left .points {
+  font-size: 14px;
+}
+.svg-container .state-pin .detail .content .right {
+  float: right;
+  width: 50%;
+  text-align: left;
+}
+.svg-container .state-pin .detail .content .right .score {
+  background: white;
+  color: #005493;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+.svg-container .state-pin .detail .btn {
+  width: 90%;
+  background: white;
+  color: #005493;
+  border-style: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 3px 0;
+  margin: 7px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+.svg-container .state-pin .detail .btn:hover {
+  background: #F2F2F2;
 }
 .svg-container .state-pin:after {
   margin-left: 11px;
@@ -296,10 +362,22 @@ body {
   border-right: 4px solid transparent;
   border-top: 8px solid #005593;
 }
-.svg-container .state-pin:hoverXX .number {
+.svg-container .state-pin:hover,
+.svg-container .state-pin.open {
+  z-index: 100;
+  width: 150px;
+  margin: 0 0;
+}
+.svg-container .state-pin:hover:after,
+.svg-container .state-pin.open:after {
+  margin-left: 71px;
+}
+.svg-container .state-pin:hover .number,
+.svg-container .state-pin.open .number {
   display: none;
 }
-.svg-container .state-pin:hoverXX .detail {
+.svg-container .state-pin:hover .detail,
+.svg-container .state-pin.open .detail {
   display: block;
 }
 .state {
