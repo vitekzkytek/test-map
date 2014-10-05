@@ -179,6 +179,7 @@ body {
   color: #ffffff;
 }
 .wrapper {
+  position: relative;
   margin: 30px auto;
   width: 50%;
   min-width: 400px;
@@ -203,7 +204,7 @@ body {
   clear: both;
 }
 .header .menu {
-  width: 100px;
+  width: 200px;
   float: left;
   position: absolute;
   z-index: 1;
@@ -234,21 +235,11 @@ body {
 .header .menu li:hover span {
   text-decoration: underline;
 }
-.header .titles {
-  margin-left: 101px;
-  margin-right: 100px;
-}
-.header .titles .title {
-  width: 50%;
-  text-align: center;
+.header .title {
   border-left: 1px solid #14679F;
-  margin-left: -1px;
-}
-.header .titles .title.title1 {
-  float: left;
-}
-.header .titles .title.title2 {
-  float: left;
+  margin-left: 201px;
+  margin-right: 100px;
+  padding-left: 20px;
 }
 .header .logo-holder {
   width: 80px;
@@ -265,13 +256,22 @@ body {
   vertical-align: middle;
   overflow: hidden;
 }
+.svg-container .top-hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(16, 99, 158, 0.7);
+  color: white;
+  z-index: 3;
+  padding: 2px 8px;
+}
 .svg-container .svg-content {
   display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
 }
-.svg-container .state-pin {
+.state-pin {
   width: 30px;
   margin: 0 60px;
   position: absolute;
@@ -280,7 +280,7 @@ body {
   vertical-align: middle;
   cursor: pointer;
 }
-.svg-container .state-pin .number {
+.state-pin .number {
   border-radius: 30px;
   background: #005593;
   display: block;
@@ -288,55 +288,55 @@ body {
   width: 30px;
   height: 30px;
 }
-.svg-container .state-pin .detail {
+.state-pin .detail {
   transition: opacity 0.5s ease;
   border-radius: 5px;
   background: #005593;
   display: none;
 }
-.svg-container .state-pin .detail .title {
+.state-pin .detail .title {
   border-bottom: 1px solid white;
   margin: 0 10px;
   text-transform: uppercase;
 }
-.svg-container .state-pin .detail .content {
+.state-pin .detail .content {
   *zoom: 1;
   line-height: 1.5;
   padding: 2px 0;
 }
-.svg-container .state-pin .detail .content:before,
-.svg-container .state-pin .detail .content:after {
+.state-pin .detail .content:before,
+.state-pin .detail .content:after {
   display: table;
   content: "";
   line-height: 0;
 }
-.svg-container .state-pin .detail .content:after {
+.state-pin .detail .content:after {
   clear: both;
 }
-.svg-container .state-pin .detail .content .left {
+.state-pin .detail .content .left {
   float: left;
   width: 50%;
   padding-top: 35px;
   text-align: center;
 }
-.svg-container .state-pin .detail .content .left .value {
+.state-pin .detail .content .left .value {
   font-size: 28px;
 }
-.svg-container .state-pin .detail .content .left .points {
+.state-pin .detail .content .left .points {
   font-size: 14px;
 }
-.svg-container .state-pin .detail .content .right {
+.state-pin .detail .content .right {
   float: right;
   width: 50%;
   text-align: left;
 }
-.svg-container .state-pin .detail .content .right .score {
+.state-pin .detail .content .right .score {
   background: white;
   color: #005493;
   border-radius: 2px;
   padding: 1px 2px;
 }
-.svg-container .state-pin .detail .btn {
+.state-pin .detail .btn {
   width: 90%;
   background: white;
   color: #005493;
@@ -348,10 +348,11 @@ body {
   font-size: 12px;
   cursor: pointer;
 }
-.svg-container .state-pin .detail .btn:hover {
-  background: #F2F2F2;
+.state-pin .detail .btn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
-.svg-container .state-pin:after {
+.state-pin:after {
   margin-left: 11px;
   margin-top: -1px;
   display: block;
@@ -362,24 +363,165 @@ body {
   border-right: 4px solid transparent;
   border-top: 8px solid #005593;
 }
-.svg-container .state-pin:hover,
-.svg-container .state-pin.open {
+.state-pin:hover,
+.state-pin.open {
   z-index: 100;
   width: 150px;
   margin: 0 0;
 }
-.svg-container .state-pin:hover:after,
-.svg-container .state-pin.open:after {
+.state-pin:hover:after,
+.state-pin.open:after {
   margin-left: 71px;
 }
-.svg-container .state-pin:hover .number,
-.svg-container .state-pin.open .number {
+.state-pin:hover .number,
+.state-pin.open .number {
   display: none;
 }
-.svg-container .state-pin:hover .detail,
-.svg-container .state-pin.open .detail {
+.state-pin:hover .detail,
+.state-pin.open .detail {
   display: block;
 }
 .state {
   fill: #F2F2F2;
+}
+.popup-holder {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+}
+.popup-holder .popup {
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  width: 50%;
+  margin-left: 25%;
+  background: white;
+}
+.popup-holder .popup .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #005493;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.popup-holder .popup .top-box {
+  *zoom: 1;
+}
+.popup-holder .popup .top-box:before,
+.popup-holder .popup .top-box:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.popup-holder .popup .top-box:after {
+  clear: both;
+}
+.popup-holder .popup .top-box .first,
+.popup-holder .popup .top-box .second,
+.popup-holder .popup .top-box .third {
+  float: left;
+  width: 33.33%;
+}
+.popup-holder .popup .top-box .state {
+  color: black;
+}
+.popup-holder .popup .top-box .state .points .value {
+  font-size: 48px;
+  text-align: center;
+}
+.popup-holder .popup .top-box .state .points .label {
+  text-align: center;
+}
+.popup-holder .popup .top-box .state .score {
+  *zoom: 1;
+}
+.popup-holder .popup .top-box .state .score:before,
+.popup-holder .popup .top-box .state .score:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.popup-holder .popup .top-box .state .score:after {
+  clear: both;
+}
+.popup-holder .popup .top-box .state .score .label,
+.popup-holder .popup .top-box .state .score value {
+  width: 50%;
+  float: left;
+}
+.bottom-bar {
+  *zoom: 1;
+}
+.bottom-bar:before,
+.bottom-bar:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.bottom-bar:after {
+  clear: both;
+}
+.bottom-bar .btn {
+  width: 50px;
+  height: 50px;
+  float: left;
+  text-align: center;
+}
+.bottom-bar .btn.btn-play {
+  border-right: 1px solid #9ad9e9;
+}
+.bottom-bar .btn.btn-download {
+  float: right;
+}
+.bottom-bar .years {
+  background: white;
+  margin-left: 101px;
+  margin-right: 51px;
+  *zoom: 1;
+}
+.bottom-bar .years:before,
+.bottom-bar .years:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.bottom-bar .years:after {
+  clear: both;
+}
+.bottom-bar .years .year {
+  color: black;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+.bottom-bar .years .year .label {
+  background: #005493;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.bottom-bar .years .year:hover .label,
+.bottom-bar .years .year.selected .label {
+  background-color: rgba(0, 84, 148, 0.6);
+  color: white;
+}
+.bottom-bar .years.count3 .year {
+  width: 33.33%;
+}
+.bottom-bar .years.count4 .year {
+  width: 25%;
+}
+.bottom-bar .years.count5 .year {
+  width: 20%;
+}
+.bottom-bar .years.count6 .year {
+  width: 16.666666666666668%;
 }

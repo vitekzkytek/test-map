@@ -1,0 +1,68 @@
+.bottom-bar {
+    .clearfix();
+    .btn {
+
+        width: 50px;
+        height: 50px;
+        float: left;
+        text-align: center;
+
+        &.btn-play {
+            border-right: 1px solid @lightBlue;
+        }
+        &.btn-stop {
+
+        }
+        &.btn-download {
+            float: right;
+        }
+    }
+
+    .years {
+        background: white;
+        margin-left: 101px;
+        margin-right: 51px;
+        .clearfix();
+        .year {
+            color: black;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            
+            .label {
+                background: @darkBlue;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+            
+            &:hover, &.selected {
+                .label {
+                    .background-opacity(@darkBlue, .6);
+                    color: white;
+                }
+            }
+        }
+        &.count3 {
+            .year {
+                width: 33.33%;   
+            }
+        }
+        &.count4 {
+            .year {
+                width: 25%;   
+            }
+        }
+        &.count5 {
+            .year {
+                width: 20%;   
+            }
+        }
+        &.count6 {
+            .year {
+                width: (100% / 6);   
+            }
+        }
+    }
+}

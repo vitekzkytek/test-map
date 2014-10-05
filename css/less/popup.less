@@ -1,0 +1,71 @@
+.popup-holder {
+    .background-opacity(black, .3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    
+    .popup {
+        position: absolute;
+        top: 10%;
+        bottom: 50%;
+        width: 50%;
+        margin-left: 25%;
+        background: white;
+        
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: @darkBlue;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .top-box {
+            .clearfix();
+            
+            .first, .second, .third {
+                float: left;
+                width: 33.33%;
+            }
+            
+            .state {
+                color: black;    
+                .points {
+                    .value {
+                        font-size: 48px;
+                        text-align: center;
+                    }                    
+                    .label {
+                        text-align: center;
+                    }
+                }
+                .score {
+                    .clearfix();
+                    .label, value {
+                        width: 50%;
+                        float: left;
+                    }
+                    .label {
+                        
+                    }
+                    .value {
+                    }                    
+                }
+                .detail {
+                    .number {
+                        
+                    }
+                    .desc {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
