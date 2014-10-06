@@ -2,7 +2,7 @@ var data = {
     "years": ["2014", "2013", "2012"],
     "metrics": {
         "1": {
-            "name": "Výdaje na R&D",
+            "name": "Výdaje na R&D.",
             "desc": "Povídání o výdajích",
             "sign": "5 HDP"
         },
