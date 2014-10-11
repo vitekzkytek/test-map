@@ -35,11 +35,26 @@ $(function() {
             var metricKey = $popupMetricSelector.val();
             var metric = data.metrics[metricKey];
 
-            $state.find(".score .value").html("x");
+            //deselect / select bottom table rows
+            $(".bottom-table .selected").removeClass("selected");
+            $(".bottom-table .row-metric-" + metricKey).addClass("selected");
+
+            //fill bottom table data
+            $(".bottom-table .row").each(function() {
+                var $row = $(this);
+                var metricKey = $row.attr("data-metric");
+
+                $row.find(".subrow-" + i + " .value").html(data.states[state].metrics[year][metricKey][1] + " " + data.metrics[metricKey]["sign"]);
+                $row.find(".subrow-" + i + " .bar").css("width", data.states[state].metrics[year][metricKey][0] + "%");        
+            });
+
+            $state.find(".flag img").attr("src", "img/flags/flag-" + state + ".png");
+
+            $state.find(".score .value").html("0 / " + states.length);
 
             $state.find(".points .value").html(data.states[state].metrics[year][metricKey][0]);
 
-            $state.find(".detail .number").html(data.states[state].metrics[year][metricKey][1] + metric.sign);
+            $state.find(".detail .number").html(data.states[state].metrics[year][metricKey][1] + " " + metric.sign);
             $state.find(".detail .desc").html(metric.desc);
         }
     };
@@ -63,6 +78,7 @@ $(function() {
     $popupHolder.find(".btn-close").click(function() {
         closePopup()
     });
+    
     $popupHolder.click(function(e) {
         var $target = $(e.target);
 
@@ -102,7 +118,6 @@ $(function() {
         $(".year").removeClass("selected");
         $(".year" + year).addClass("selected");
     };
-
 
     //
     // Copy popup left state elements to right
@@ -147,13 +162,25 @@ $(function() {
         }));
     }
 
-    var metricsKeys = Object.keys(data.metrics);
+    //add metrics to the selector and the bottom-table
 
+    var $table = $popupHolder.find(".bottom-table");
+    var $rowTemplate = $table.find(".row-template").remove();
+
+    var metricsKeys = Object.keys(data.metrics);
     for (i in metricsKeys) {
         var key = metricsKeys[i];
-        //$popupMetricSelector.append($("<option>").html(data.metrics[key][name]).attr("value", key));
         $popupMetricSelector.append($("<option>").html(data.metrics[key]["name"]).attr("value", key));
+        
+        var $newRow = $rowTemplate.clone().appendTo($table).removeClass("row-template").addClass("row").addClass("row-metric-" + key).attr("data-metric", key);
+        $newRow.find(".title").html(data.metrics[key]["name"]);
+        $newRow.click(function() {
+            $popupMetricSelector.val($(this).attr("data-metric"));
+            refreshPopup();
+        });
     }
+    
+    $rowTemplate.remove();
 
     //
     // Create numbered pins

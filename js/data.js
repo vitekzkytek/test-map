@@ -4,7 +4,7 @@ var data = {
         "1": {
             "name": "Výdaje na R&D",
             "desc": "Povídání o výdajích",
-            "sign": "5 HDP"
+            "sign": "HDP"
         },
         "2": {
             "name": "Počet patentů",
@@ -17,12 +17,12 @@ var data = {
         "germany": {
             "pinFix": {
                 "x": 80,
-                "y": 0
+                "y": -5
             },
             "metrics": {
                 "2014": {
-                    "1": [10, 30],
-                    "2": [90, 30]
+                    "1": [0, 0],
+                    "2": [100, 30]
                 },
                 "2013": {
                     "1": [40, 40],
@@ -37,7 +37,7 @@ var data = {
         "ukraine": {
             "pinFix": {
                 "x": 80,
-                "y": 0
+                "y": -5
             },
             "metrics": {
                 "2014": {
@@ -57,7 +57,7 @@ var data = {
         "poland": {
             "pinFix": {
                 "x": 80,
-                "y": 0
+                "y": -5
             },
             "metrics": {
                 "2014": {
@@ -77,12 +77,12 @@ var data = {
         "czech": {
             "pinFix": {
                 "x": 80,
-                "y": 10
+                "y": -5
             },
             "metrics": {
                 "2014": {
-                    "1": [90, 30],
-                    "2": [90, 70]
+                    "1": [100, 30],
+                    "2": [0, 0]
                 },
                 "2013": {
                     "1": [50, 60],
@@ -97,7 +97,7 @@ var data = {
         "norway": {
             "pinFix": {
                 "x": 120,
-                "y": -50
+                "y": -80
             },
             "metrics": {
                 "2014": {
@@ -117,7 +117,7 @@ var data = {
         "sweden": {
             "pinFix": {
                 "x": 80,
-                "y": 0
+                "y": -5
             },
             "metrics": {
                 "2014": {

@@ -7,14 +7,23 @@
         float: left;
         text-align: center;
 
+        &.btn-play, &.btn-stop, &.btn-download {
+            .hide-text();
+            .single-background-image-replacement(url(../img/ico-play.png), 50px);
+            cursor: pointer;
+            &:hover {
+                .background-opacity(white, .2);
+            }
+        }
         &.btn-play {
             border-right: 1px solid @lightBlue;
         }
         &.btn-stop {
-
+            .single-background-image-replacement(url(../img/ico-stop.png), 50px);
         }
         &.btn-download {
             float: right;
+            .single-background-image-replacement(url(../img/ico-download.png), 50px);
         }
     }
 

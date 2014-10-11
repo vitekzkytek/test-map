@@ -30,9 +30,17 @@ body {
         top: 0;
         left: 0;
         background: #005593;
+        display: block;
         .menu-trigger {
+            .single-background-image-replacement(url(../img/ico-menu.png), 50px);
             padding: 0 10px;
+            padding-left: 60px;
+            text-transform: uppercase;
+            background-position: 20px 26px;
+            line-height: 71px;
+            height: 71px;
             cursor: pointer;
+            font-weight: bold;
             &:hover {
                 text-decoration: underline;
             }
@@ -61,12 +69,13 @@ body {
         margin-left: 201px;
         margin-right: 100px;
         padding-left: 20px;
+        text-transform: uppercase;
+        line-height: 71px;
+        font-weight: bold;
     }
     .logo-holder {
-        width: 80px;
-        background: #C6EAFB;
-        color: #005593;
-        text-align: center;
+        width: 159px;
+        height: 71px;
         float: right;
     }
 }
@@ -75,7 +84,7 @@ body {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 79%;
+    padding-bottom: 78.2%;
     vertical-align: middle;
     overflow: hidden;
 

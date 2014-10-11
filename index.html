@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -28,48 +27,53 @@
 
                     <div class="top-box">
                         <div class="first">
-                            <select class="state-selector-1">
-                            </select>
-                            <select class="state-selector-2">
-                            </select>
-                            <select class="year-selector">
-                            </select>
-                            <select class="metric-selector">
-                            </select>
+                            <div class="inner">
+                                <select class="state-selector-1 selector">
+                                </select>
+                                <select class="state-selector-2 selector">
+                                </select>
+                                <select class="year-selector selector">
+                                </select>
+                                <select class="metric-selector selector">
+                                </select>
+                            </div>
                         </div>
                         <div class="second state state1">
-                            <img class="flag" src="" alt="Flag"/>
-                            <div class="points">
-                                <div class="value">88</div>
-                                <div class="label">bodů</div>
-                            </div>
-                            <div class="score">
-                                <div class="label">Pořadí:</div>
-                                <div class="value">3/28</div>
-                            </div>
-                            <div class="detail">
-                                <div class="number"></div>
-                                <div class="desc"></div>
+                            <div class="inner">
+                                <div class="flag">
+                                    <img src="" alt="Flag"/>
+                                </div>
+                                <div class="points">
+                                    <div class="value">88</div>
+                                    <div class="label">bodů</div>
+                                </div>
+                                <div class="score">
+                                    <div class="label">Pořadí:</div>
+                                    <div class="value">3/28</div>
+                                </div>
+                                <div class="detail">
+                                    <div class="number"></div>
+                                    <div class="desc"></div>
+                                </div>
                             </div>
                         </div>
                     </div> <!-- top box -->
 
                     <div class="bottom-table">
-                        <div class="row">
+                        <div class="row-template">
                             <div class="title"></div>
                             <div class="metrics">
-                                <div class="first">
-                                    <div class="bar"></div><div class="value"></div>
+                                <div class="subrow-1">
+                                    <div class="bar"><div class="value"></div></div>
                                 </div>
-                                <div class="second">
-                                    <div class="bar"></div><div class="value"></div>
+                                <div class="subrow-2">
+                                    <div class="bar"><div class="value"></div></div>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- top box -->
                 </div>
             </div>
-
 
             <div class="header">
                 <div class="menu">
@@ -80,7 +84,7 @@
                     </ul>
                 </div>
                 <div class="logo-holder">
-                    <img src="" alt=""/>
+                    <img src="img/logo.jpg" alt=""/>
                 </div>
                 <div class="title">
                     ERSTE Innovation Barometer
