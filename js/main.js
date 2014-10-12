@@ -55,7 +55,7 @@ $(function() {
             $state.find(".points .value").html(data.states[state].metrics[year][metricKey][0]);
 
             $state.find(".detail .number").html(data.states[state].metrics[year][metricKey][1] + " " + metric.sign);
-            $state.find(".detail .desc").html(metric.desc);
+            $state.find(".detail .desc").html(metric.desc_suffix);
         }
     };
 
@@ -95,7 +95,7 @@ $(function() {
         var year = $popupYearSelector.val();
         var metricKey = $popupMetricSelector.val();
         var metric = data.metrics[metricKey];
-        $hint.html(metric.desc);
+        $hint.html(metric.info);
 
         for (i in states) {
             var state = states[i];
